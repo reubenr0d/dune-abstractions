@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: curvefi_ethereum_trades
+    meta:
+      blockchain: ethereum
+      project: curvefi
+      contributors: yulesa, soispoke
+    config:
+      tags: ['ethereum','curvefi','trades']
+    description: >
+        Curve Finance trades on Ethereum
+    columns:
+      - &blockchain
+        name: blockchain
+        description: "Blockchain"
+      - name: evt_block_time
+        description: "UTC event block time"
+      - name: project
+        description: "Project name"
+      - name: version
+        description: "Project version"
+      - name: trader_a
+        description:  "Buyer"
+      - name: trader_b
+        description:  "Trader b"
+      - name: token_a_amount_raw
+        description: "Raw amout of token a"
+      - name: token_b_amount_raw
+        description: "Raw amout of token b"
+      - name: token_a_address
+        description:  "Token a contract address"
+      - name: token_b_address
+        description:  "Token b contract address"
+      - name: evt_tx_hash
+        description: "Transaction hash"
+      - name: trace_address
+        description: "Trace address"
+      - name: evt_index
+        description: "Event Index"
