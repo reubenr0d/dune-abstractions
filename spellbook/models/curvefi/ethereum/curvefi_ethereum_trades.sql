@@ -6,9 +6,9 @@
 
 SELECT
     'ethereum' as blockchain,
-    evt_block_time AS block_time,
     'Curve' AS project,
     '' AS version,
+    evt_block_time AS block_time,
     buyer AS trader_a,
     NULL as trader_b,
     tokens_bought AS token_a_amount_raw,

@@ -26,6 +26,12 @@ clean-targets:         # directories to be removed by `dbt clean`
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 models:
   spellbook:
+    curvefi:
+      +schema: curvefi
+      +materialized: view
+      ethereum:
+        +schema: curvefi_ethereum
+        +materialized: view
     opensea:
       +schema: opensea
       +materialized: view
@@ -103,6 +109,8 @@ on-run-end:
   - "{{ alter_tblproperties_balances_ethereum_erc20_hour() }}"
   - "{{ alter_tblproperties_balances_ethereum_erc20_day() }}"
   - "{{ alter_tblproperties_balances_ethereum_erc20_latest() }}"
+  
+  - "{{ alter_tblproperties_curvefi_trades() }}"
 
   - "{{ alter_tblproperties_opensea_trades() }}"
   - "{{ alter_tblproperties_opensea_volume_day() }}"
