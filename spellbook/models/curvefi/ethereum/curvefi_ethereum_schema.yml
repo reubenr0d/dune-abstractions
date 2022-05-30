@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: curvefi_ethereum_trades
+  - name: curvefi_ethereum_view_trades
     meta:
       blockchain: ethereum
       project: curvefi
