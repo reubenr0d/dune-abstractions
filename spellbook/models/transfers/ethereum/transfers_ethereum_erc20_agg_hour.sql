@@ -2,7 +2,9 @@
         alias ='erc20_agg_hour', 
         materialized ='incremental', 
         file_format ='delta', 
-        incremental_strategy='merge'
+        incremental_strategy='merge',
+        tblproperties={'dune.public':'true',
+                        'dune.data_explorer.blockchains':'["ethereum"]'}
         )
 }}
 
