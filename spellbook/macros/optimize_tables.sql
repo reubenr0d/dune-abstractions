@@ -1,5 +1,5 @@
 {% macro optimize_tables() %}
-{%- if flags.full_refresh -%}
+{%- if target.name == 'prod'-%}
 {% set transfers_ethereum_erc20_agg_hour %}
 OPTIMIZE transfers_ethereum.erc20_agg_hour;
 {% endset %}
